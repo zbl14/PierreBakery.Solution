@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PierreBakery.Models
 {
@@ -6,13 +7,24 @@ namespace PierreBakery.Models
   {
     private int _pastryPrice = 2;
     public int PastryPrice;
-
     public int PastryQuantity { get; set; }
+    private static List<PastryOrder> _instances = new List<PastryOrder> {};
 
     public PastryOrder(int pastryQuantity)
     {
       PastryPrice = _pastryPrice;
       PastryQuantity = pastryQuantity;
+      _instances.Add(this);
+    }
+
+    public static List<PastryOrder> GetAll()
+    {
+      return _instances;
+    }
+
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
 
     public int PastryOrderCost()

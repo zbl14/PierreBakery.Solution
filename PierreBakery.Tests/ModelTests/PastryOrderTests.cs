@@ -1,16 +1,17 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierreBakery.Models;
 
 namespace PierreBakery.Tests
 {
   [TestClass]
-  public class PastryOrderTests // : IDisposable
+  public class PastryOrderTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   ClassName.ClearAll();
-    // }
+    public void Dispose()
+    {
+      PastryOrder.ClearAll();
+    }
 
     [TestMethod]
     public void PastryOrderConstructor_CreatInstanceOfPastryOrder_PastryOrder()
@@ -98,6 +99,26 @@ namespace PierreBakery.Tests
       PastryOrder newPastryOrder = new PastryOrder(pastryQuantity);
       int pastryOrderTotal = newPastryOrder.PastryOrderCost();
       Assert.AreEqual(20, pastryOrderTotal);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyPastryOrderCostList_CostList()
+    {
+      List<PastryOrder> newList = new List<PastryOrder> { };
+      List<PastryOrder> result = PastryOrder.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsOrderCost_CostList()
+    {
+      int pastryQuantity1 = 1;
+      int pastryQuantity2 = 2;
+      PastryOrder newPastryOrder1 = new PastryOrder(pastryQuantity1);
+      PastryOrder newPastryOrder2 = new PastryOrder(pastryQuantity2);
+      List<PastryOrder> newList = new List<PastryOrder> { newPastryOrder1, newPastryOrder2};
+      List<PastryOrder> result = PastryOrder.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
