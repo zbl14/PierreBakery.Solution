@@ -1,11 +1,11 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using PierreBakery.Models;
 
-namespace ProjectName.Tests
+namespace PierreBakery.Tests
 {
   [TestClass]
-  public class ClassNameTests // : IDisposable
+  public class BreadTests // : IDisposable
   {
     // public void Dispose()
     // {
