@@ -45,5 +45,14 @@ namespace PierreBakery.Tests
       int pastryOrderTotal = newPastryOrder.PastryOrderCost();
       Assert.AreEqual(5, pastryOrderTotal);
     }
+
+    [TestMethod]
+    public void PastryOrderCost_ReturnsPastryOrderCost_4()
+    {
+      int pastryQuantity = 2;
+      PastryOrder newPastryOrder = new PastryOrder(pastryQuantity);
+      int pastryOrderTotal = newPastryOrder.PastryOrderCost();
+      Assert.AreEqual(4, pastryOrderTotal);
+    }
   }
 }
