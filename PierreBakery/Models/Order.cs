@@ -18,6 +18,7 @@ namespace PierreBakery.Models
     public int BreadOrderCost()
     {
       int breadOrderTotal = 0;
+      breadOrderTotal = BreadPrice * BreadQuantity;
       return breadOrderTotal;
     }
   }
