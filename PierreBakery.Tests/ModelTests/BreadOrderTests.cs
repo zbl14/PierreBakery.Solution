@@ -1,16 +1,17 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierreBakery.Models;
 
 namespace PierreBakery.Tests
 {
   [TestClass]
-  public class BreadOrderTests // : IDisposable
+  public class BreadOrderTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   ClassName.ClearAll();
-    // }
+    public void Dispose()
+    {
+      BreadOrder.ClearAll();
+    }
 
     [TestMethod]
     public void BreadOrderConstructor_CreatInstanceOfBreadOrder_BreadOrder()
@@ -23,7 +24,7 @@ namespace PierreBakery.Tests
     public void GetBreadOrder_ReturnsBreadOrder_Int()
     {
       int breadQuantity = 5;
-      BreadOrder newBreadOrder = new BreadOrder(5);
+      BreadOrder newBreadOrder = new BreadOrder(breadQuantity);
       int orderedBreadQuantity = newBreadOrder.BreadQuantity;
       Assert.AreEqual(breadQuantity, orderedBreadQuantity);
     }
@@ -54,5 +55,25 @@ namespace PierreBakery.Tests
       int breadOrderTotal = newBreadOrder.BreadOrderCost();
       Assert.AreEqual(15, breadOrderTotal);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyBreadOrderCostList_CostList()
+    {
+      List<BreadOrder> newList = new List<BreadOrder> { };
+      List<BreadOrder> result = BreadOrder.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+
+    // [TestMethod]
+    // public void TotalOrderCost_ReturnsTotalOrderCost_7()
+    // {
+    //   int breadQuantity = 1;
+    //   int pastryQuantity = 1;
+    //   BreadOrder newBreadOrder = new BreadOrder(breadQuantity);
+    //   PastryOrder newPastryOrder = new PastryOrder(pastryQuantity);
+    //   int orderTotal = newBreadOrder.BreadOrderCost() + newPastryOrder.PastryOrderCost();
+    //   Assert.AreEqual(7, orderTotal);
+    // }
   }
 }
