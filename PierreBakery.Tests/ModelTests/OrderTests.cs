@@ -27,5 +27,14 @@ namespace PierreBakery.Tests
       int orderedBreadQuantity = newBreadOrder.BreadQuantity;
       Assert.AreEqual(breadQuantity, orderedBreadQuantity);
     }
+
+    [TestMethod]
+    public void BreadOrderCost_ReturnsBreadOrderCost_5()
+    {
+      int breadQuantity = 1;
+      BreadOrder newBreadOrder = new BreadOrder(breadQuantity);
+      int breadOrderTotal = newBreadOrder.BreadOrderCost();
+      Assert.AreEqual(5, breadOrderTotal);
+    }
   }
 }
