@@ -31,7 +31,7 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void PastryOrderCost_ReturnsPastryOrderCost_2()
     {
-      int pastryQuantity = 5;
+      int pastryQuantity = 1;
       PastryOrder newPastryOrder = new PastryOrder(pastryQuantity);
       int pastryOrderTotal = newPastryOrder.PastryOrderCost();
       Assert.AreEqual(2, pastryOrderTotal);
