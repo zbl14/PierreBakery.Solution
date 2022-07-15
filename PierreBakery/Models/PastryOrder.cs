@@ -29,6 +29,7 @@ namespace PierreBakery.Models
         case 5:
           PastryOrderTotal = 5 + 2 * (PastryQuantity - 3) ;
           break;
+         
       }
       return PastryOrderTotal;
     }
