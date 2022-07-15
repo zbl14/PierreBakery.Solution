@@ -15,11 +15,10 @@ namespace PierreBakery.Models
       PastryQuantity = pastryQuantity;
     }
 
-    // public int BreadOrderCost()
-    // {
-    //   int breadOrderTotal = 0;
-    //   breadOrderTotal = BreadPrice * (BreadQuantity - BreadQuantity / 3);
-    //   return breadOrderTotal;
-    // }
+    public int PastryOrderCost()
+    {
+      int PastryOrderTotal = 0;
+      return PastryOrderTotal;
+    }
   }
 }
