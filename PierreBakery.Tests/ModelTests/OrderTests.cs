@@ -12,11 +12,11 @@ namespace PierreBakery.Tests
     //   ClassName.ClearAll();
     // }
 
-    [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-    {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
-    }
+    // [TestMethod]
+    // public void BreadOrderConstructor_CreatInstanceOfOrder_BreadOrder()
+    // {
+    //   Bread newBreadOrder = new Bread ();
+    //   Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
+    // }
   }
 }
