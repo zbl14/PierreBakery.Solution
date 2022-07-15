@@ -12,11 +12,11 @@ namespace PierreBakery.Tests
     //   ClassName.ClearAll();
     // }
 
-    // [TestMethod]
-    // public void BreadOrderConstructor_CreatInstanceOfOrder_BreadOrder()
-    // {
-    //   Bread newBreadOrder = new Bread ();
-    //   Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
-    // }
+    [TestMethod]
+    public void BreadOrderConstructor_CreatInstanceOfBreadOrder_BreadOrder()
+    {
+      Bread newBreadOrder = new Bread ();
+      Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
+    }
   }
 }
