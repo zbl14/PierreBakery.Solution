@@ -33,12 +33,5 @@ namespace PierreBakery.Models
       breadOrderTotal = BreadPrice * (BreadQuantity - BreadQuantity / 3);
       return breadOrderTotal;
     }
-
-    // public int TotalOrderCost()
-    // {
-    //   int orderTotal = 0;
-    //   orderTotal = orderTotal + BreadOrderCost() + PastryOrder.PastryOrderCost();
-    //   return orderTotal;
-    // }
   }
 }

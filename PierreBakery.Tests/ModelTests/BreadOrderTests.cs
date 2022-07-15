@@ -75,17 +75,5 @@ namespace PierreBakery.Tests
       List<BreadOrder> result = BreadOrder.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-
-
-    // [TestMethod]
-    // public void TotalOrderCost_ReturnsTotalOrderCost_7()
-    // {
-    //   int breadQuantity = 1;
-    //   int pastryQuantity = 1;
-    //   BreadOrder newBreadOrder = new BreadOrder(breadQuantity);
-    //   PastryOrder newPastryOrder = new PastryOrder(pastryQuantity);
-    //   int orderTotal = newBreadOrder.BreadOrderCost() + newPastryOrder.PastryOrderCost();
-    //   Assert.AreEqual(7, orderTotal);
-    // }
   }
 }
