@@ -64,6 +64,18 @@ namespace PierreBakery.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsOrderCost_CostList()
+    {
+      int breadQuantity1 = 1;
+      int breadQuantity2 = 2;
+      BreadOrder newBreadOrder1 = new BreadOrder(breadQuantity1);
+      BreadOrder newBreadOrder2 = new BreadOrder(breadQuantity2);
+      List<BreadOrder> newList = new List<BreadOrder> { newBreadOrder1, newBreadOrder2};
+      List<BreadOrder> result = BreadOrder.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
 
     // [TestMethod]
     // public void TotalOrderCost_ReturnsTotalOrderCost_7()
