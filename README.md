@@ -18,31 +18,42 @@ A consolo App for ordering bread and pastries at Pierre's Bakery. A customer can
 ---
 ## Setup/Installation Requirements
 
-* Install *`Microsoft .NET SDK`*
+<details>
+<summary><strong>To Setup</strong></summary>
+<li>Install <em>Microsoft .NET SDK<em></li>
+<li>Clone the repo
 
-* Clone the repo
 ```sh
-https://github.com/zbl14/PierreBakery.Solution.git
-``` 
+$ git clone https://github.com/zbl14/PierreBakery.Solution.git
+```
+</li>
+</details>
+
 <details>
 <summary><strong>To Run</strong></summary>
 Navigate to  
-   <pre>ProjectName.Solution
-   ├── <strong>ProjectName</strong>
-   └── ProjectName.Tests</pre>
+   <pre>PierreBakery.Solution
+   ├── <strong>PierreBakery</strong>
+   └── PierreBakery.Tests</pre>
 
-Run ```$ dotnet run``` in the console
+```sh
+$ dotnet run
+```
 </details>
 
 <details>
 <summary><strong>For Testing</strong></summary>
 Navigate to  
-    <pre>ProjectName.Solution
-    ├── ProjectName
-    └── <strong>ProjectName.Tests</strong></pre>
+    <pre>PierreBakery.Solution
+    ├── PierreBakery
+    └── <strong>PierreBakery.Tests</strong></pre>
 
-Run ```$ dotnet restore``` in the console\
-Run ```$ dotnet test``` in the console
+```sh
+$ dotnet restore
+```
+```sh
+$ dotnet test
+```
 
 </details>
 <br/>
