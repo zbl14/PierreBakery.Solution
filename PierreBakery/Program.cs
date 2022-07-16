@@ -115,9 +115,6 @@ namespace PierreBakery
           pastryTotal += thisOrder.PastryOrderCost();
         } 
         total = breadTotal + pastryTotal;
-        Console.WriteLine(breadTotal);
-        Console.WriteLine(pastryTotal);
-        Console.WriteLine(total);
         if (breadTotal == 0 || pastryTotal == 0)
         {
           Console.WriteLine("Your total for order(s) is $ " + total);
