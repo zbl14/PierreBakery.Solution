@@ -41,6 +41,7 @@ Navigate to
     ├── ProjectName
     └── <strong>ProjectName.Tests</strong></pre>
 
+Run ```$ dotnet restore``` in the console
 Run ```$ dotnet test``` in the console
 
 </details>
