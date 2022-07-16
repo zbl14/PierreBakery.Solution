@@ -69,34 +69,69 @@ namespace PierreBakery
       int pastryQuantity = int.Parse(Console.ReadLine());
       PastryOrder newPastryOrder = new PastryOrder(pastryQuantity);
       Console.WriteLine("The total cost of this pastries order is $ " + newPastryOrder.PastryOrderCost() + "\n");
-      Console.WriteLine("Would you like to order some bread? 'B' for bread, 'Enter' for quit");
-      string response = Console.ReadLine();
-      if (response.ToUpper() == "B")
+      Console.WriteLine("Would you like to check out? 'Y' for yes, 'N' for continue shopping");
+      string responseCheckOut = Console.ReadLine();
+      if (responseCheckOut.ToUpper() == "Y")
       {
-        OrderBread();
+        Checkout();
       }
-      else
+      else if (responseCheckOut.ToUpper() == "N")
       {
-        Quit();
+        Console.WriteLine("Would you like to order some bread or continue to order pastry? 'P' for pastry, 'B' for bread, 'Enter' for quit");
+        string response = Console.ReadLine();
+        if (response.ToUpper() == "B")
+        {
+          OrderBread();
+        }
+        else if (response.ToUpper() == "P")
+        {
+          OrderPastry();
+        }
+        else
+        {
+          Quit();
+        }
       }
     }
 
     static void Checkout()
     {
       List<BreadOrder> breadCart = BreadOrder.GetAll();
-      if (breadCart.Count == 0)
+      List<PastryOrder> pastryCart = PastryOrder.GetAll();
+      if (breadCart.Count == 0 && pastryCart.Count == 0)
       {
         Console.WriteLine("You don't have any order yet");
         Main();
       }
       else
       {
-        int breadTotal = 0;
+        int breadTotal = 0, pastryTotal = 0, total = 0;
         foreach (BreadOrder thisOrder in breadCart)
         {
           breadTotal += thisOrder.BreadOrderCost();
         }
-        Console.WriteLine("Your total for all bread order is $ " + breadTotal);
+        foreach (PastryOrder thisOrder in pastryCart)
+        {
+          pastryTotal += thisOrder.PastryOrderCost();
+        } 
+        total = breadTotal + pastryTotal;
+        Console.WriteLine(breadTotal);
+        Console.WriteLine(pastryTotal);
+        Console.WriteLine(total);
+        if (breadTotal == 0 || pastryTotal == 0)
+        {
+          Console.WriteLine("Your total for order(s) is $ " + total);
+          Quit();
+        }
+        else
+        {
+          Console.WriteLine(
+            "Total for bread is $ " + breadTotal + "\n" +
+            "Total for pastries is $ " + pastryTotal + "\n" +
+            "Your total is $ " + total + "\n"
+          );
+          Quit();
+        }
       }
     }
 
