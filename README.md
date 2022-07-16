@@ -1,8 +1,8 @@
-# {C# Application Name}
+# Pierre's Bakery Order App
 
 #### By _**Zhibin Liang**_  
 
-#### _{Brief description of application}_  
+#### _A consolo App for ordering bread and/or pastries at Pierre's Bakery_  
 
 ---
 ## Technologies Used
@@ -13,16 +13,17 @@
 ---
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+A consolo App for ordering bread and pastries at Pierre's Bakery. A customer can enter a amount of bread and/or pastries and receive the total of the order(s).
 
 ---
 ## Setup/Installation Requirements
 
 * Install *`Microsoft .NET SDK`*
-* Place files in a folder named `ProjectName.Solution`
-    <pre>ProjectName.Solution
-    ├── ProjectName
-    └── ProjectName.Tests</pre>
+
+* Clone the repo
+```sh
+https://github.com/zbl14/PierreBakery.Solution.git
+``` 
 <details>
 <summary><strong>To Run</strong></summary>
 Navigate to  
@@ -50,8 +51,7 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ---
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* A non-positive number input to the question of order amount will cause a unhandled exception and quit the application.
 
 ## License
 MIT
